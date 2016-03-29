@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>刘逸简历</title>
+    <!--<style type="text/css">-->
+        <!--@font-face {-->
+            <!--font-family: 'Glyphicons Halflings';-->
+            <!--src: url('libs/bootstrap/fonts/glyphicons-halflings-regular.eot');-->
+            <!--src: url('libs/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),-->
+            <!--url('libs/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'),-->
+            <!--url('libs/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'),-->
+            <!--url('libs/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');-->
+        <!--}-->
+    <!--</style>-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index2.css">
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+
+</head>
+<body>
+    <div class="all" id="all">
+        <!--第一屏-->
+        <div class="section section1">
+            <div class=sec_up>
+                <span>个人简历</span>
+            </div>
+            <div class=sec_down>
+                <span>RESUME</span>
+                <i class="glyphicon glyphicon-chevron-up"></i>
+            </div>
+        </div>
+        <!--第二屏-->
+        <div class="section section2">
+            <div class="logo"></div>
+            <div class=sec_up></div>
+            <div class=sec_down>
+                <span>Web Developer</span>
+                <p>刘逸简历</p>
+                <i class="glyphicon glyphicon-chevron-up"></i>
+            </div>
+        </div>
+        <!--第三屏-->
+        <div class="section section3">
+            <div class="topSilde">
+                <span>关于我</span>
+                <p>About me</p>
+            </div>
+            <div class="aboutMe">
+                <span class="name">刘逸</span>&nbsp;
+                <span class="sex">汉子</span>
+                <br><br>
+                <div class="school">
+                    <span class="font_tit">
+                            <span>&nbsp;毕业院校 </span>
+                    </span>
+                    <span>&nbsp;中国传媒大学 | 2008级广告学</span>
+                </div>
+                <div class="local">
+                     <span class="font_tit">
+                            <span>&nbsp;现居地 </span>
+                    </span>
+                    <span>&nbsp;北京海淀区西三旗四拨子</span>
+                </div>
+                <br><br>
+                <div class="hobby">
+                    <span class="font_tit">
+                            <span>&nbsp;兴趣爱好 </span>
+                    </span>
+                    <span>&nbsp;喜欢吃，喝，听歌，设计，旅行</span>
+                </div>
+                <div class="home_skill">
+                    <span class="font_tit">
+                        <span>&nbsp;业余技能 </span>
+                    </span>
+                    <span>&nbsp;摄影，制作电子杂志，烹饪</span>
+                </div>
+                <div class="tomb">
+                    <span class="font_tit">
+                        <span>&nbsp;座右铭 </span>
+                    </span>
+                    <span>&nbsp;人生就像一场旅行，不在乎旅途的终点</span>
+                    <br>
+                    <span>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                        在乎的是沿途的风景，和看风景的人。</span>
+                </div>
+                <div class="hope">
+                    <span class="font_tit">
+                        <span>&nbsp;工作期望 </span>
+                    </span>
+                    <span>&nbsp;五险一金，双修，希望与大神们工作</span>
+                </div>
+                <br><br>
+                <div class="contact">
+                    <span class="font_tit">
+                        <span>联系方式</span>
+                    </span>
+                </div>
+                <div class=email>
+                   <span>
+                        <span>E-mail: </span>
+                    </span>
+                    <span>&nbsp;liuyi00805@163.com</span>
+                </div>
+                <div class="phone">
+                    <span>
+                        <span>Phone: </span>
+                    </span>
+                    <span>&nbsp;186-6537-5736</span>
+                </div>
+                </div>
+            <i class="glyphicon glyphicon-chevron-up"></i>
+        </div>
+        <!--第四屏-->
+        <div class="section section4">4</div>
+        <!--第五屏-->
+        <div class="section section5">5</div>
+    </div>
+</body>
+</html>
+<script src="libs/jquery-1.11.1.js"></script>
+<script src="libs/jquery.fullPage.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(function(){
+        $('#all').fullpage({
+            // 设置背景色
+            sectionsColor : ["#656d78","#656d78","#656d78","#656d78","#656d78"],
+            anchors:["page1","page2","page3","page4","page5","page1"],
+            continuousVertical:true,
+            css3:true,
+
+            afterLoad: function (anchorLink, index) {
+                $('.section').removeClass('current');
+                // 延时100毫秒执行
+                setTimeout(function () {
+                    $('.section').eq(index - 1).addClass('current');
+                }, 100);
+            }
+        });
+    })
+</script>

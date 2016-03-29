@@ -1,0 +1,44 @@
+/*基本样式*/
+*{
+    margin:0;
+    padding: 0;
+    border:0;
+    list-style: none;
+}
+body {
+    font-family:sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #fff;
+}
+/*第一屏*/
+.current.section1 .sec_up {
+    height: 0%;
+    background-color:#434a54;
+    animation: sec1_ani 0.6s ease-out forwards;
+}
+.current.section1 .sec_down {
+    height: 70%;
+}
+/*@keyframes sec1_ani {*/
+    /*form{*/
+        /*height: 0%;*/
+    /*}to {*/
+        /*height: 30%;*/
+         /*}*/
+/*}*/
+.current.section2 .sec_up {
+    height: 0%;
+    background-color:#434a54;
+    animation: sec1_ani 0.6s ease-out forwards;
+}
+.current.section2 .sec_down {
+    height: 70%;
+}
+@keyframes sec1_ani {
+    form{
+        height: 0%;
+    }to {
+         height: 30%;
+     }
+}

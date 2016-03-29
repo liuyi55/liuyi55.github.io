@@ -1,0 +1,36 @@
+.topbox {
+    width: 200px;
+    height: 80px;
+    background-color: #434a54;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    transform: translate(700px);
+    transition: all 1s;
+}
+
+.section1.current .topbox {
+    transform: translateX(0);
+}
+
+.topbox h1 {
+    /*font: lighter 15px/30px "microsoft yahei";*/
+    font-weight: 900;
+    font-family: "·½Õý´ÖÔ²¼òÌå";
+    color: #3dbdff;
+    text-align: center;
+    opacity: 0;
+}
+
+.section1.current .topbox h1 {
+    animation: section1-ani 1.5s 1s forwards;
+}
+
+@keyframes section1-ani {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
