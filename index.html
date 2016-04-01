@@ -212,18 +212,74 @@
             </div>
             <i class="glyphicon glyphicon-chevron-up"></i>
         </div>
-        <!--第七屏-->
+        <!--第七屏 自我评价-->
         <div class="section section7">
             <div class="topSilde">
-                <span>工作经验</span>
-                <p>Experience</p>
+                <span>自我评价</span>
+                <p>Appraise</p>
             </div>
+            <div class="sec7_down">
+                <div class="sec7_head">
+                    <p>积极</p>
+                    <span>向上</span>
+                </div>
+                <div class="sec7_body">
+                    <ul>
+                        <li class="lefthand">
+                            <p>拼</p>
+                            <p>博</p>
+                        </li>
+                        <li class="midbody">
+                            <p>吃苦</p>
+                            <p>耐劳</p>
+                        </li>
+                        <li class="righthand">
+                            <p>诚</p>
+                            <p>恳</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec7_leg">
+                    <ul>
+                        <li class="leftleg">
+                            <p>团</p>
+                            <p>结</p>
+                            <p>互</p>
+                            <p>助</p>
+                        </li>
+                        <li class="rightleg">
+                            <p>善</p>
+                            <p>于</p>
+                            <p>沟</p>
+                            <p>通</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sec7_foot">
+                    <p>踏实稳重</p>
+                </div>
+            </div>
+            <i class="glyphicon glyphicon-chevron-up"></i>
         </div>
-        <!--第八屏-->
+        <!--第八屏 我的爱好-->
         <div class="section section8">
             <div class="topSilde">
-                <span>工作经验</span>
-                <p>Experience</p>
+                <span>我的爱好</span>
+                <p>Hobby</p>
+            </div>
+        </div>
+        <!--第九屏-->
+        <div class="section section9">
+            <div class="topSilde">
+                <span>我的爱好</span>
+                <p>Hobby</p>
+            </div>
+        </div>
+        <!--第十屏-->
+        <div class="section section10">
+            <div class="topSilde">
+                <span>我的爱好</span>
+                <p>Hobby</p>
             </div>
         </div>
     </div>
@@ -231,58 +287,36 @@
 </html>
 <script src="libs/jquery-1.11.1.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="libs/jquery.fullPage.min.js"></script>
 <script src="libs/konva/konva.min.js"></script>
-<!--<script src="js/canvasCode.js"></script>-->
+<script src="js/canvasCode.js"></script>
+<script src="libs/jquery.fullPage.min.js"></script>
 <script>
     $('#all').fullpage({
         // 设置背景色
         sectionsColor: ["#656d78", "#656d78", "#656d78", "#656d78",
-            "#656d78", "#656d78", "#656d78", "#656d78"],
-        continuousVertical: true,
-        anchors:["page1","page2","page3","page4","page5","page6"],
+            "#656d78", "#656d78", "#656d78", "#656d78"
+            , "#656d78", "#656d78"],
+        anchors:["page1","page2","page3","page4",
+            "page5","page6","page7","page8","page9","page10"],
         css3:true,
+        navigation:true,
+        navigationColor:"green",
+        loopBottom:true,
 
+    // 执行翻页之后的回调函数
         afterLoad: function (anchorLink, index) {
             $('.section').removeClass('current');
             // 延时100毫秒执行
             setTimeout(function () {
                 $('.section').eq(index - 1).addClass('current');
             }, 1);
-            function ccc(){
-                function rectall (id,color,done){
-                    var stage = new Konva.Stage({
-                        container:id,
-                        width:160,
-                        height:40
-                    });
-                    var layer = new Konva.Layer();
-                    stage.add(layer);
-                    var blue = new Konva.Rect({
-                        x:0,
-                        y:0,
-                        width:0,
-                        height:33,
-                        fill:color,
-                        shadowBlur: 10,
-                        shadowOffset: {x : 3, y : 7},
-                        shadowOpacity: 0.5
-                    });
-                    layer.add(blue);
-                    layer.draw();
-                    blue.to({
-                        width: done,
-                        duration: 5
-                    });
-                }
-                rectall("pic1p","#00b7ef",130);
-                rectall("pic2p","#ff90b7",120);
-                rectall("pic3p","#da1d3a",100);
-                rectall("pic4p","#fff",120);
-                rectall("pic5p","#52ee4c",80);
-                rectall("pic6p","#eeee25",100);
-            };
-            ccc();
+            //canvas的画方块
+            rectAll("pic1p","#00b7ef",130);
+            rectAll("pic2p","#ff90b7",120);
+            rectAll("pic3p","#da1d3a",100);
+            rectAll("pic4p","#fff",120);
+            rectAll("pic5p","#52ee4c",80);
+            rectAll("pic6p","#eeee25",100);
         }
     });
 </script>

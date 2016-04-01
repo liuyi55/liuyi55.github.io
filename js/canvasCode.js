@@ -3,7 +3,7 @@
  */
 
 
-function rectall (id,color,done){
+function rectAll (id,color,done){
     var stage = new Konva.Stage({
         container:id,
         width:160,
@@ -28,9 +28,9 @@ function rectall (id,color,done){
         duration: 5
     });
 }
-rectall("pic1p","#00b7ef",130);
-rectall("pic2p","#ff90b7",120);
-rectall("pic3p","#da1d3a",100);
-rectall("pic4p","#fff",120);
-rectall("pic5p","#52ee4c",80);
-rectall("pic6p","#eeee25",100);
+//rectAll("pic1p","#00b7ef",130);
+//rectAll("pic2p","#ff90b7",120);
+//rectAll("pic3p","#da1d3a",100);
+//rectAll("pic4p","#fff",120);
+//rectAll("pic5p","#52ee4c",80);
+//rectAll("pic6p","#eeee25",100);
