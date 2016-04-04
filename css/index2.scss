@@ -15,6 +15,36 @@ body {
   font-size: 1.1em;
   color: $coffe;
 }
+
+/*音乐*/
+#menu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  list-style-type: none;
+  z-index: 70;
+  #mp3icon {
+    font-size: 22px;
+    color: white;
+    position: fixed;
+    top: 7%;
+    right: 7%;
+  }
+  .mp3rotate {
+    animation: rotate 10s linear infinite;
+  }
+  @keyframes rotate {
+    from {
+
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
 /*--------------公共样式-----------*/
 /*一二屏上方背景*/
 %sec12_up {
@@ -112,7 +142,6 @@ body {
   opacity: 0;
   animation: fadeInUp 1.5s 1s ease-out infinite;
 }
-
 /*--------------分屏样式------------*/
 /*第一屏*/
 .section1 {

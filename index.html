@@ -11,6 +11,10 @@
 </head>
 <body>
     <div class="all" id="all">
+        <ul id="menu">
+            <div class="glyphicon glyphicon-headphones mp3rotate" id="mp3icon"></div>
+        </ul>
+        <audio id="mp3" src="images/seeyouagain.mp3" autoplay loop></audio>
         <!--第一屏 首页-->
         <div class="section section1">
             <div class=sec_up>
@@ -351,8 +355,20 @@
 <script src="libs/jquery.fullPage.min.js"></script>
 <script>
     $(".comfirm").on("click",function(){
-        alert("请填写内容")
-    })
+        alert("请填写内容");
+    });
+    var k = 1;
+    $("#mp3icon").on("click", function () {
+        if (k == 1) {
+            $('#mp3')[0].pause();
+            $(this).removeClass('glyphicon-headphones mp3rotate').addClass('glyphicon-pause');
+            k = 0;
+        } else {
+            $('#mp3')[0].play();
+            $(this).removeClass('glyphicon-pause').addClass('glyphicon-headphones mp3rotate');
+            k = 1;
+        }
+    });
     $('#all').fullpage({
         // 设置背景色
         sectionsColor: ["#656d78", "#656d78", "#656d78", "#656d78",
@@ -360,13 +376,13 @@
             , "#656d78", "#656d78"],
         anchors:["page1","page2","page3","page4",
             "page5","page6","page7","page8","page9","page10"],
+        menu: '#menu',
         css3:true,
-        navigation:true,
-        navigationColor:"green",
         loopBottom:true,
 
     // 执行翻页之后的回调函数
         afterLoad: function (anchorLink, index) {
+
             $('.section').removeClass('current');
             // 延时100毫秒执行
             setTimeout(function () {

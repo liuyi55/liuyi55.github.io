@@ -14,6 +14,26 @@ body {
   font-size: 1.1em;
   color: #e3d5c8; }
 
+/*音乐*/
+#menu {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  list-style-type: none;
+  z-index: 70; }
+  #menu #mp3icon {
+    font-size: 22px;
+    color: white;
+    position: fixed;
+    top: 7%;
+    right: 7%; }
+  #menu .mp3rotate {
+    animation: rotate 10s linear infinite; }
+@keyframes rotate {
+  to {
+    transform: rotate(360deg); } }
 /*--------------公共样式-----------*/
 /*一二屏上方背景*/
 .section1 .sec_up, .section2 .sec_up {
