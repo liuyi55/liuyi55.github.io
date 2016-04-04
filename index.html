@@ -267,21 +267,80 @@
                 <span>我的爱好</span>
                 <p>Hobby</p>
             </div>
+            <div class="sec8_down">
+                <ul>
+                    <li class="hob_mid">
+                        <p>户外运动</p>
+                    </li>
+                    <li class="hob_up">
+                        <p>篮球</p>
+                    </li>
+                    <li class="hob_right">
+                        <p>游泳</p>
+                    </li>
+                    <li class="hob_down">
+                        <p>旅游</p>
+                    </li>
+                    <li class="hob_left">
+                        <p>电影</p>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <!--第九屏-->
+        <!--第九屏 面试邀请-->
         <div class="section section9">
             <div class="topSilde">
-                <span>我的爱好</span>
-                <p>Hobby</p>
+                <span>面试邀请</span>
+                <p>Interview</p>
+            </div>
+            <div class="sec9_down">
+                <form class="form-horizontal">
+                    <p>如果你对我感兴趣,可以直接邀请我</p>
+                    <div class="form-group">
+                        <label for="hr" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="hr" placeholder="HR">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tel" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <input type="tel" class="form-control" id="tel" placeholder="电话">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="job" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="job" placeholder="面试职位">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-sm-2 control-label"></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="address" placeholder="公司地址">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="time" class="col-sm-2 control-label">面试时间:</label>
+                        <div class="col-sm-10">
+                            <input type="date" class="form-control" id="time" placeholder="面试时间">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary btn-block comfirm">提交</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <!--第十屏-->
-        <div class="section section10">
-            <div class="topSilde">
-                <span>我的爱好</span>
-                <p>Hobby</p>
-            </div>
-        </div>
+        <!--<div class="section section10">-->
+            <!--<div class="topSilde">-->
+                <!--<span>我的爱好</span>-->
+                <!--<p>Hobby</p>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 </body>
 </html>
@@ -291,6 +350,9 @@
 <script src="js/canvasCode.js"></script>
 <script src="libs/jquery.fullPage.min.js"></script>
 <script>
+    $(".comfirm").on("click",function(){
+        alert("请填写内容")
+    })
     $('#all').fullpage({
         // 设置背景色
         sectionsColor: ["#656d78", "#656d78", "#656d78", "#656d78",

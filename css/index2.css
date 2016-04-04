@@ -27,7 +27,7 @@ body {
   to {
     height: 30%; } }
 /*每屏上方样式*/
-.section3 .topSilde, .section4 .topSilde, .section5 .topSilde, .section6 .topSilde, .section7 .topSilde, .section8 .topSilde, .section9 .topSilde, .section10 .topSilde {
+.section3 .topSilde, .section4 .topSilde, .section5 .topSilde, .section6 .topSilde, .section7 .topSilde, .section8 .topSilde, .section9 .topSilde {
   width: 100%;
   height: 120px;
   background-color: #434a54;
@@ -36,16 +36,16 @@ body {
   left: 0;
   opacity: 0;
   padding: 15px 0 0 15px; }
-  .section3 .topSilde span, .section4 .topSilde span, .section5 .topSilde span, .section6 .topSilde span, .section7 .topSilde span, .section8 .topSilde span, .section9 .topSilde span, .section10 .topSilde span {
+  .section3 .topSilde span, .section4 .topSilde span, .section5 .topSilde span, .section6 .topSilde span, .section7 .topSilde span, .section8 .topSilde span, .section9 .topSilde span {
     font-size: 38px;
     color: #3dbdff; }
-  .section3 .topSilde p, .section4 .topSilde p, .section5 .topSilde p, .section6 .topSilde p, .section7 .topSilde p, .section8 .topSilde p, .section9 .topSilde p, .section10 .topSilde p {
+  .section3 .topSilde p, .section4 .topSilde p, .section5 .topSilde p, .section6 .topSilde p, .section7 .topSilde p, .section8 .topSilde p, .section9 .topSilde p {
     font-size: 20px; }
 
 /*每屏上方动画*/
-.current.section3 .topSilde, .current.section4 .topSilde, .current.section5 .topSilde, .current.section6 .topSilde, .current.section7 .topSilde, .current.section8 .topSilde, .current.section9 .topSilde, .current.section10 .topSilde {
+.current.section3 .topSilde, .current.section4 .topSilde, .current.section5 .topSilde, .current.section6 .topSilde, .current.section7 .topSilde, .current.section8 .topSilde, .current.section9 .topSilde {
   animation: slideInRight 0.5s 0.5s ease-out forwards; }
-  .current.section3 .topSilde p, .current.section4 .topSilde p, .current.section5 .topSilde p, .current.section6 .topSilde p, .current.section7 .topSilde p, .current.section8 .topSilde p, .current.section9 .topSilde p, .current.section10 .topSilde p {
+  .current.section3 .topSilde p, .current.section4 .topSilde p, .current.section5 .topSilde p, .current.section6 .topSilde p, .current.section7 .topSilde p, .current.section8 .topSilde p, .current.section9 .topSilde p {
     animation: bounceInRight 1s 0.5s linear; }
 
 /*第四屏logo样式*/
@@ -74,6 +74,7 @@ body {
 .section4 .sec4_down .edu_words li:nth-child(3), .section4 .sec4_down .edu_year li:nth-child(3), .section4 .sec4_down .edu_detil li:nth-child(3) {
   opacity: 0; }
 
+/*第七屏方块*/
 /*下方翻页箭头*/
 .section1 .sec_down i, .section2 .sec_down i, .section3 i, .section4 i, .current.section5 i, .section6 i, .current.section7 i {
   color: white;
@@ -497,17 +498,102 @@ body {
 /*第八屏*/
 .section8 {
   position: relative; }
+  .section8 .sec8_down {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+    left: 0; }
+    .section8 .sec8_down .hob_mid {
+      width: 100px;
+      height: 100px;
+      background-color: #e3d108;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      line-height: 100px;
+      position: absolute;
+      top: 35%;
+      left: 34%;
+      width: 120px;
+      height: 120px;
+      line-height: 120px; }
+    .section8 .sec8_down .hob_up {
+      width: 100px;
+      height: 100px;
+      background-color: #52e140;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      line-height: 100px;
+      position: absolute;
+      top: 10%;
+      left: 36%;
+      opacity: 0; }
+    .section8 .sec8_down .hob_right {
+      width: 100px;
+      height: 100px;
+      background-color: #ca0000;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      line-height: 100px;
+      position: absolute;
+      top: 36%;
+      left: 71%;
+      opacity: 0; }
+    .section8 .sec8_down .hob_down {
+      width: 100px;
+      height: 100px;
+      background-color: #3dbdff;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      line-height: 100px;
+      position: absolute;
+      top: 65%;
+      left: 36%;
+      opacity: 0; }
+    .section8 .sec8_down .hob_left {
+      width: 100px;
+      height: 100px;
+      background-color: #ff80c5;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      line-height: 100px;
+      position: absolute;
+      top: 36%;
+      left: 2%;
+      opacity: 0; }
 
 /*第八屏动画*/
+.current.section8 .hob_up {
+  animation: slideInUp 1s 1s ease-out forwards; }
+.current.section8 .hob_right {
+  animation: slideInLeft 1s 1s ease-out forwards; }
+.current.section8 .hob_down {
+  animation: slideInDown 1s 1s ease-out forwards; }
+.current.section8 .hob_left {
+  animation: slideInRight 1s 1s ease-out forwards; }
+
 /*第九屏*/
 .section9 {
   position: relative; }
+  .section9 .sec9_down {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    padding: 10px;
+    font-size: 16px; }
 
 /*第九屏动画*/
-/*第十屏*/
-.section10 {
-  position: relative; }
-
-/*第十屏动画*/
 
 /*# sourceMappingURL=index2.css.map */

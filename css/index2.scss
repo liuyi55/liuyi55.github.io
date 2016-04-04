@@ -88,6 +88,20 @@ body {
     opacity: 0;
   }
 }
+/*第七屏方块*/
+@mixin boxAll($bwidth:55px,$bheight:100px,$btop:10%,$bleft:36%){
+  width: $bwidth;
+  height: $bheight;
+  background-color: #fff;
+  border-radius: 10%;
+  text-align: center;
+  font-size: 20px;
+  color: $ligthblue;
+  padding-top: 20px;
+  position: absolute;
+  top: $btop;
+  left: $bleft;
+}
 /*下方翻页箭头*/
 %nextpage {
   color: white;
@@ -561,19 +575,6 @@ body {
 .section7 {
   position: relative;
   @extend %topSilde_all;
-  @mixin boxAll($bwidth:55px,$bheight:100px,$btop:10%,$bleft:36%){
-    width: $bwidth;
-    height: $bheight;
-    background-color: #fff;
-    border-radius: 10%;
-    text-align: center;
-    font-size: 20px;
-    color: $ligthblue;
-    padding-top: 20px;
-    position: absolute;
-    top: $btop;
-    left: $bleft;
-  }
   .sec7_down {
     position: absolute;
     top: 20%;
@@ -661,27 +662,91 @@ body {
 .section8 {
   position: relative;
   @extend %topSilde_all;
+  .sec8_down {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    @mixin hobby($hbgc:#e3d108,$htop:36%,$hleft:36%){
+      width: 100px;
+      height: 100px;
+      background-color: $hbgc;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      font-size: 22px;
+      line-height: 100px;
+      position: absolute;
+      top: $htop;
+      left: $hleft;
+    }
+    .hob_mid {
+      @include hobby($htop:35%,$hleft:34%);
+      width: 120px;
+      height: 120px;
+      line-height: 120px;
+      //opacity: 0;
+    }
+    .hob_up {
+      @include hobby($hbgc: #52e140,$htop:10%,$hleft:36%);
+      opacity: 0;
+    }
+    .hob_right {
+      @include hobby($hbgc: #ca0000,$htop:36%,$hleft:71%);
+      opacity: 0;
+    }
+    .hob_down {
+      @include hobby($hbgc:$ligthblue,$htop:65%,$hleft:36%);
+      opacity: 0;
+    }
+    .hob_left {
+      @include hobby($hbgc: #ff80c5,$htop:36%,$hleft:2%);
+      opacity: 0;
+    }
+  }
 }
 /*第八屏动画*/
 .current.section8 {
   @extend %topSilde_ani;
+  .hob_up {
+    animation: slideInUp 1s 1s ease-out forwards;
+  }
+  .hob_right {
+    animation: slideInLeft 1s 1s ease-out forwards;
+  }
+  .hob_down {
+    animation: slideInDown 1s 1s ease-out forwards;
+  }
+  .hob_left {
+    animation: slideInRight 1s 1s ease-out forwards;
+  }
 }
 /*第九屏*/
 .section9 {
   position: relative;
   @extend %topSilde_all;
+  .sec9_down {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 25%;
+    left: 0%;
+    padding: 10px;
+    font-size: 16px;
+  }
 }
 /*第九屏动画*/
 .current.section9 {
   @extend %topSilde_ani;
 }
-/*第十屏*/
-.section10 {
-  position: relative;
-  @extend %topSilde_all;
-}
-/*第十屏动画*/
-.current.section10 {
-  @extend %topSilde_ani;
-}
+///*第十屏*/
+//.section10 {
+//  position: relative;
+//  @extend %topSilde_all;
+//}
+///*第十屏动画*/
+//.current.section10 {
+//  @extend %topSilde_ani;
+//}
 
