@@ -382,7 +382,8 @@
         css3:true,
         loopBottom:true,
         afterRender:function(){
-            $("#mp3").play();
+            $("#mp3")[0].play();
+            console.log("fffffff");
         },
     // 执行翻页之后的回调函数
         afterLoad: function (anchorLink, index) {
