@@ -47,7 +47,7 @@ body {
   to {
     height: 30%; } }
 /*每屏上方样式*/
-.section3 .topSilde, .section4 .topSilde, .section5 .topSilde, .section6 .topSilde, .section7 .topSilde, .section8 .topSilde, .section9 .topSilde {
+.section3 .topSilde, .section4 .topSilde, .section5 .topSilde, .section6 .topSilde, .section7 .topSilde, .section8 .topSilde, .section9 .topSilde, .section10 .topSilde {
   width: 100%;
   height: 120px;
   background-color: #434a54;
@@ -56,16 +56,16 @@ body {
   left: 0;
   opacity: 0;
   padding: 15px 0 0 15px; }
-  .section3 .topSilde span, .section4 .topSilde span, .section5 .topSilde span, .section6 .topSilde span, .section7 .topSilde span, .section8 .topSilde span, .section9 .topSilde span {
+  .section3 .topSilde span, .section4 .topSilde span, .section5 .topSilde span, .section6 .topSilde span, .section7 .topSilde span, .section8 .topSilde span, .section9 .topSilde span, .section10 .topSilde span {
     font-size: 38px;
     color: #3dbdff; }
-  .section3 .topSilde p, .section4 .topSilde p, .section5 .topSilde p, .section6 .topSilde p, .section7 .topSilde p, .section8 .topSilde p, .section9 .topSilde p {
+  .section3 .topSilde p, .section4 .topSilde p, .section5 .topSilde p, .section6 .topSilde p, .section7 .topSilde p, .section8 .topSilde p, .section9 .topSilde p, .section10 .topSilde p {
     font-size: 20px; }
 
 /*每屏上方动画*/
-.current.section3 .topSilde, .current.section4 .topSilde, .current.section5 .topSilde, .current.section6 .topSilde, .current.section7 .topSilde, .current.section8 .topSilde, .current.section9 .topSilde {
+.current.section3 .topSilde, .current.section4 .topSilde, .current.section5 .topSilde, .current.section6 .topSilde, .current.section7 .topSilde, .current.section8 .topSilde, .current.section9 .topSilde, .current.section10 .topSilde {
   animation: slideInRight 0.5s 0.5s ease-out forwards; }
-  .current.section3 .topSilde p, .current.section4 .topSilde p, .current.section5 .topSilde p, .current.section6 .topSilde p, .current.section7 .topSilde p, .current.section8 .topSilde p, .current.section9 .topSilde p {
+  .current.section3 .topSilde p, .current.section4 .topSilde p, .current.section5 .topSilde p, .current.section6 .topSilde p, .current.section7 .topSilde p, .current.section8 .topSilde p, .current.section9 .topSilde p, .current.section10 .topSilde p {
     animation: bounceInRight 1s 0.5s linear; }
 
 /*第四屏logo样式*/
@@ -596,11 +596,11 @@ body {
 .current.section8 .hob_up {
   animation: slideInUp 1s 1s ease-out forwards; }
 .current.section8 .hob_right {
-  animation: slideInLeft 1s 1s ease-out forwards; }
+  animation: slideInLeft 1s 1.2s ease-out forwards; }
 .current.section8 .hob_down {
-  animation: slideInDown 1s 1s ease-out forwards; }
+  animation: slideInDown 1s 1.4s ease-out forwards; }
 .current.section8 .hob_left {
-  animation: slideInRight 1s 1s ease-out forwards; }
+  animation: slideInRight 1s 1.6s ease-out forwards; }
 
 /*第九屏*/
 .section9 {
@@ -615,5 +615,12 @@ body {
     font-size: 16px; }
 
 /*第九屏动画*/
+/*第十屏*/
+.section10 {
+  position: relative; }
+  .section10 .topSilde {
+    top: 40%; }
+
+/*第十屏动画*/
 
 /*# sourceMappingURL=index2.css.map */

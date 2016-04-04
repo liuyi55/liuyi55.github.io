@@ -742,13 +742,13 @@ body {
     animation: slideInUp 1s 1s ease-out forwards;
   }
   .hob_right {
-    animation: slideInLeft 1s 1s ease-out forwards;
+    animation: slideInLeft 1s 1.2s ease-out forwards;
   }
   .hob_down {
-    animation: slideInDown 1s 1s ease-out forwards;
+    animation: slideInDown 1s 1.4s ease-out forwards;
   }
   .hob_left {
-    animation: slideInRight 1s 1s ease-out forwards;
+    animation: slideInRight 1s 1.6s ease-out forwards;
   }
 }
 /*第九屏*/
@@ -769,13 +769,16 @@ body {
 .current.section9 {
   @extend %topSilde_ani;
 }
-///*第十屏*/
-//.section10 {
-//  position: relative;
-//  @extend %topSilde_all;
-//}
-///*第十屏动画*/
-//.current.section10 {
-//  @extend %topSilde_ani;
-//}
+/*第十屏*/
+.section10 {
+  position: relative;
+  @extend %topSilde_all;
+  .topSilde {
+    top:40%;
+  }
+}
+/*第十屏动画*/
+.current.section10 {
+  @extend %topSilde_ani;
+}
 
