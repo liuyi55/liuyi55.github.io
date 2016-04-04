@@ -361,11 +361,13 @@
     $("#mp3icon").on("click", function () {
         if (k == 1) {
             $('#mp3')[0].pause();
-            $(this).removeClass('glyphicon-headphones mp3rotate').addClass('glyphicon-pause');
+            $(this).removeClass('glyphicon-headphones mp3rotate')
+                    .addClass('glyphicon-pause');
             k = 0;
         } else {
             $('#mp3')[0].play();
-            $(this).removeClass('glyphicon-pause').addClass('glyphicon-headphones mp3rotate');
+            $(this).removeClass('glyphicon-pause')
+                    .addClass('glyphicon-headphones mp3rotate');
             k = 1;
         }
     });
@@ -379,10 +381,11 @@
         menu: '#menu',
         css3:true,
         loopBottom:true,
-
+        afterRender:function(){
+            $("#mp3").play();
+        },
     // 执行翻页之后的回调函数
         afterLoad: function (anchorLink, index) {
-
             $('.section').removeClass('current');
             // 延时100毫秒执行
             setTimeout(function () {
